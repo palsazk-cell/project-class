@@ -1,0 +1,13 @@
+digraph ERD {
+  graph [rankdir=LR, bgcolor="white", pad="0.3", label="Database ER Diagram", labelloc=t, fontsize=18, fontname="DejaVu Sans"];
+  node [shape=plain, fontname="DejaVu Sans", fontsize=11];
+  users [label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="7">
+      <TR><TD BGCOLOR="#3158d8"><FONT COLOR="white"><B>users</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><B>PK</B> id : INTEGER</TD></TR>
+      <TR><TD ALIGN="LEFT"><B>UNIQUE</B> username : TEXT</TD></TR>
+      <TR><TD ALIGN="LEFT">password : TEXT</TD></TR>
+      <TR><TD ALIGN="LEFT">created_at : TEXT</TD></TR>
+    </TABLE>
+  >];
+}

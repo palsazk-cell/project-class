@@ -1,0 +1,11 @@
+digraph UseCase {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.45", ranksep="0.7", label="Use Case: Signup and Login", labelloc=t, fontsize=18, fontname="DejaVu Sans"];
+  node [fontname="DejaVu Sans", fontsize=11, style=filled, color="#b8c7e8", fillcolor="#edf3ff", shape=ellipse, margin="0.18,0.12"];
+  user [label="User", shape=box, fillcolor="#e5f7ed", color="#9fd5b6"];
+  signup [label="Sign up"];
+  login [label="Log in"];
+  success [label="Show login success message"];
+  user -> signup;
+  user -> login;
+  login -> success [label="after valid login"];
+}

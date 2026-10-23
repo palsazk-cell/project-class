@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "کاربر" as User
+rectangle "سامانه ثبت‌نام و ورود" {
+  usecase "ثبت‌نام" as Signup
+  usecase "ورود" as Login
+  usecase "نمایش پیام ورود موفق" as Success
+}
+User --> Signup
+User --> Login
+Login .> Success : <<include>>
+@enduml

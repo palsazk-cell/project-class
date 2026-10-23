@@ -1,0 +1,12 @@
+digraph SequenceFlow {
+  graph [rankdir=TB, bgcolor="white", pad="0.35", nodesep="0.35", ranksep="0.45", label="Signup and Login Flow", labelloc=t, fontsize=18, fontname="DejaVu Sans"];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=10, color="#b8c7e8", fillcolor="#edf3ff", margin="0.18,0.12"];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#65718a", arrowsize=0.7];
+  signup [label="1. User submits signup form"];
+  validate [label="2. Validate form fields"];
+  insert [label="3. Save username and password in SQLite"];
+  login [label="4. User submits login form"];
+  lookup [label="5. Find username and compare password"];
+  success [label="6. Show: Login successful", fillcolor="#e5f7ed", color="#9fd5b6"];
+  signup -> validate -> insert -> login -> lookup -> success;
+}

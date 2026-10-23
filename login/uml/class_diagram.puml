@@ -1,0 +1,21 @@
+@startuml
+class AuthPages {
+  +signup()
+  +login()
+  +showSuccessMessage()
+}
+class Database {
+  +connect()
+  +createUsersTable()
+  +insertUser()
+  +findUserByUsername()
+}
+class User {
+  +id: int
+  +username: string
+  +password: string
+  +created_at: datetime
+}
+AuthPages --> Database : uses
+Database "1" --> "0..*" User : stores
+@enduml

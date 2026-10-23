@@ -1,0 +1,9 @@
+@startuml
+entity "users" as users {
+  * id : INTEGER <<PK>>
+  --
+  * username : TEXT <<UNIQUE>>
+  * password : TEXT
+  * created_at : TEXT
+}
+@enduml

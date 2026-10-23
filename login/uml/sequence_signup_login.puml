@@ -1,0 +1,19 @@
+@startuml
+actor "کاربر" as User
+participant "signup.php" as Signup
+database "SQLite users.sqlite" as DB
+participant "login.php" as Login
+participant "success.php" as Success
+
+User -> Signup: ارسال نام کاربری و رمز عبور
+Signup -> Signup: بررسی اطلاعات
+Signup -> DB: ذخیره username و password
+DB --> Signup: ثبت‌نام انجام شد
+Signup --> User: انتقال به صفحه ورود
+User -> Login: ارسال اطلاعات ورود
+Login -> DB: جست‌وجوی نام کاربری
+DB --> Login: username و password ذخیره‌شده
+Login -> Login: مقایسه رمز واردشده با دیتابیس
+Login -> Success: ورود صحیح
+Success --> User: نمایش «ورود موفقیت‌آمیز بود»
+@enduml

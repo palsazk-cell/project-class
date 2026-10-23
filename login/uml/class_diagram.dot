@@ -1,0 +1,9 @@
+digraph ClassDiagram {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.6", ranksep="0.7", label="Simplified Class Diagram", labelloc=t, fontsize=18, fontname="DejaVu Sans"];
+  node [shape=record, fontname="DejaVu Sans", fontsize=10, style=filled, fillcolor="#edf3ff", color="#b8c7e8", margin="0.12"];
+  AuthPages [label="{AuthPages|+ signup()\l+ login()\l+ showSuccessMessage()\l}"];
+  Database [label="{Database|+ connect()\l+ createUsersTable()\l+ insertUser()\l+ findUserByUsername()\l}"];
+  User [label="{User|id: int\lusername: string\lpassword: string\lcreated_at: datetime\l}"];
+  AuthPages -> Database [label="uses", fontname="DejaVu Sans"];
+  Database -> User [label="stores", fontname="DejaVu Sans"];
+}

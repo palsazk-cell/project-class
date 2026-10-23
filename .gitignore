@@ -1,0 +1,8 @@
+
+# Python virtual environment
+.venv/
+
+# SQLite database files
+login/database/*.sqlite
+login/database/*.sqlite3
+login/database/*.db
